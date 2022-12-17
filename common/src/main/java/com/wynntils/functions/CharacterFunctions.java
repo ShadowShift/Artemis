@@ -333,6 +333,17 @@ public class CharacterFunctions {
         @Override
         public Float getValue(String argument) {
             return Managers.Character.getCharacterInfo().getXpProgress() * 100.0f;
+        } 
+    }
+        public static class FarmingLevelFunction extends Function<Integer> {
+        @Override
+        public Integer getValue(String argument) {
+            return Managers.Character.getCharacterInfo().getLevel(Farming);
+        }
+        @Override
+        public List<String> getAliases() {
+            return List.of("Farming");
+        
         }
     }
 }
